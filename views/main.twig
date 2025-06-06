@@ -1,0 +1,14 @@
+{% extends "__layout.twig" %}
+
+{% block content %}
+<ul class="list-group">
+    <li class="list-group-item">
+        Добро пожаловать на мой сайт, посвященный персонажам саги "Звездные войны"!<br>
+    </li>
+    <div class="row">
+        {% for object in star_wars_characters %}
+            {% include "menuItem.twig" with {menu: object} %} 
+        {% endfor %}
+    </div>
+</ul>
+{% endblock %}
